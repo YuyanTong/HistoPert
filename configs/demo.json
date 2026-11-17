@@ -1,0 +1,45 @@
+{
+  "seed": 11,
+  "device": "cpu",
+  "model": {
+    "hidden_dim": 16,
+    "cancer_emb_dim": 64,
+    "dropout": 0.1,
+    "patient_text_dim": 1024,
+    "stage3_output_dim": 978,
+    "perturb_hidden_dim": 4
+  },
+  "stage1": {
+    "stage1_epochs": 1,
+    "stage1_batch_size": 8,
+    "stage1_cancers_per_batch": 2,
+    "stage1_same_cancer_sample_n": 4,
+    "stage1_global_sample_n": 8
+  },
+  "stage2": {
+    "stage2_epochs": 1,
+    "stage2_batch_size": 8
+  },
+  "stage3": {
+    "stage3_epochs": 1,
+    "stage3_batch_size": 16,
+    "stage3_num_workers": 0,
+    "stage3_use_amp": false
+  },
+  "description": "Synthetic CPU example with small hidden layers and 1 epoch per stage",
+  "run_dir": "../outputs/demo",
+  "data": {
+    "features_output_dir": "../examples/demo_data/he.parquet",
+    "txt_file_path": "../examples/demo_data/patient_ids.txt",
+    "patient_csv_path": "../examples/demo_data/patients.csv",
+    "patient_uce_path": "../examples/demo_data/patient_uce.parquet",
+    "patient_text_embedding_path": "../examples/demo_data/context.npy",
+    "patient_text_embedding_index_path": "../examples/demo_data/context_index.csv",
+    "cell_emb_path": "../examples/demo_data/cell_uce.parquet",
+    "cell_cancer_path": "../examples/demo_data/cell_cancers.csv",
+    "cell_drug_dose_expr_parquet": "../examples/demo_data/treated.parquet",
+    "cell_control_parquet": "../examples/demo_data/control.parquet",
+    "drug_embedding_path": "../examples/demo_data/drugs.parquet",
+    "split_path": "../examples/demo_data/split.json"
+  }
+}

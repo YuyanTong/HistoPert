@@ -1,0 +1,31 @@
+{
+  "seed": 11,
+  "device": "cpu",
+  "model": {
+    "hidden_dim": 512,
+    "cancer_emb_dim": 64,
+    "dropout": 0.1,
+    "patient_text_dim": 1024,
+    "stage3_output_dim": 978,
+    "perturb_hidden_dim": 64
+  },
+  "stage1": {},
+  "stage2": {},
+  "stage3": {},
+  "description": "Portable feature-file layout; provide data separately",
+  "run_dir": "../outputs/tcga",
+  "data": {
+    "features_output_dir": "../data/tcga/he.parquet",
+    "txt_file_path": "../data/tcga/patient_ids.txt",
+    "patient_csv_path": "../data/tcga/patients.csv",
+    "patient_uce_path": "../data/tcga/patient_uce.parquet",
+    "patient_text_embedding_path": "../data/tcga/context.npy",
+    "patient_text_embedding_index_path": "../data/tcga/context_index.csv",
+    "cell_emb_path": "../data/lincs/cell_uce.parquet",
+    "cell_cancer_path": "../data/lincs/cell_cancers.csv",
+    "cell_drug_dose_expr_parquet": "../data/lincs/treated.parquet",
+    "cell_control_parquet": "../data/lincs/control.parquet",
+    "drug_embedding_path": "../data/lincs/drugs.parquet",
+    "split_path": "../data/splits/tcga_main_split.json"
+  }
+}
